@@ -12,7 +12,6 @@ const Discover = () => {
 	const { activeSong, isPlaying, genreListId } = useSelector((state) => state.player);
 	const { data, isFetching, error } = useGetSongsByGenreQuery(genreListId || 'POP');
 	const genreTitle = genres.find(({ value }) => value === genreListId)?.title;
-	console.log("halo" + genreTitle);
 
 	if (isFetching) return <Loader title="Loading songs..." />;
 
